@@ -1,0 +1,53 @@
+.continer {
+    text-align: center;
+    direction: rtl; /* لإضافة اتجاه النص من اليمين لليسار */
+    padding: 20px;
+    background-color: #f9f5f0; /* لون خلفية ناعم */
+    font-family: 'Traditional Arabic', Arial, sans-serif; /* خط مناسب للغة العربية */
+}
+
+.title {
+    font-size: 50px;
+    color: #8b4513; /* لون بني دافئ */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف للنص */
+}
+
+.content {
+    outline: 3px black double;
+    width: 90%; /* لجعل العرض أكثر مرونة */
+    max-width: 850px; /* أقصى عرض */
+    font-size: 60px; /* حجم خط أصغر قليلاً */
+    font-weight: 700;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px; /* زوايا مدورة */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* ظل لطيف */
+    line-height: 1.8; /* مسافة بين الأسطر */
+}
+
+.content span {
+    display: block;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.content p {
+    margin: 20px 0;
+    text-align: justify; /* محاذاة النص */
+    text-justify: inter-word;
+}
+
+span[style*="color: red"] {
+    font-weight: bold;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+span[style*="display: block"] {
+    font-size: 28px;
+    color: #5d2906; /* لون داكن للعناوين */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
