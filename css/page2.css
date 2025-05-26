@@ -1,48 +1,57 @@
+/* أساسيات الصفحة */
 body {
     font-family: 'Traditional Arabic', Arial, sans-serif;
     background-color: #f5f5f5;
     direction: rtl;
     padding: 0;
     margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
+/* العناوين الرئيسية */
 .title {
     text-align: center;
-    margin-top: 30px;
-    font-size: 42px;
+    margin-top: clamp(20px, 5vw, 50px);
+    font-size: clamp(28px, 6vw, 42px);
     color: #5d2906;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    padding: 15px;
+    padding: clamp(10px, 3vw, 15px);
 }
 
+/* الحاوية الرئيسية */
 .contienr {
     width: 90%;
     max-width: 900px;
-    margin: 20px auto;
-    padding: 10px;
+    margin: clamp(15px, 3vw, 30px) auto;
+    padding: clamp(5px, 2vw, 15px);
+    box-sizing: border-box;
 }
 
+/* المحتوى العام */
 .content, .content3 {
     outline: 2px solid #8b4513;
-    font-size: 60px;
+    font-size: clamp(24px, 5vw, 60px);
     font-weight: 800;
     background-color: white;
     border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 30px;
+    padding: clamp(15px, 3vw, 25px);
+    margin-bottom: clamp(20px, 4vw, 30px);
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+/* القوائم */
 .content ul, .content3 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .content li, .content3 li {
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 15px);
     line-height: 1.6;
     text-align: right;
-    padding-right: 15px;
+    padding-right: clamp(10px, 2vw, 15px);
     position: relative;
 }
 
@@ -51,74 +60,112 @@ body {
     color: #8b4513;
     font-weight: bold;
     position: absolute;
-    right: -10px;
+    right: clamp(-8px, -1vw, -10px);
+    top: 0;
 }
 
+/* المحتوى الثانوي */
 .content2 {
     text-align: center;
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
-    margin: 30px 0;
+    padding: clamp(15px, 3vw, 20px);
+    margin: clamp(20px, 4vw, 30px) 0;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .content2 span {
-    font-size: 60px;
+    font-size: clamp(28px, 6vw, 60px);
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 15px);
     color: #5d2906;
     font-weight: 800;
 }
 
 .content2 p {
-    font-size: 60px;
+    font-size: clamp(24px, 5vw, 60px);
     font-weight: 800;
     line-height: 1.8;
+    margin: clamp(10px, 2vw, 15px) 0;
 }
 
-.content3 {
-    margin-top: 30px;
-}
-
+/* العناوين الفرعية */
 .title3, .title4 {
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(28px, 5vw, 40px);
     color: #5d2906;
-    margin: 25px 0;
-    padding-bottom: 10px;
+    margin: clamp(15px, 3vw, 25px) 0;
+    padding-bottom: clamp(5px, 1.5vw, 10px);
     border-bottom: 2px solid #e0d6cc;
 }
 
+/* العناصر الخاصة */
 .cont {
     text-align: center;
     border-bottom: 2px dotted #8b4513;
-    padding-bottom: 20px;
-    margin: 30px 0;
+    padding-bottom: clamp(15px, 3vw, 20px);
+    margin: clamp(20px, 4vw, 30px) 0;
 }
 
 span[style*="color: red"] {
     color: #b22222 !important;
     font-weight: bold;
+    font-size: clamp(20px, 4vw, 36px);
 }
 
 span[style*="display: block"] {
     display: block;
-    margin: 20px 0;
+    margin: clamp(15px, 3vw, 20px) 0;
     font-weight: bold;
+    font-size: clamp(20px, 4vw, 32px);
 }
 
 p[style*="color: red"] {
     color: #b22222;
     font-weight: 800;
     text-align: center;
-    font-size: 60px;
-    margin: 25px 0;
+    font-size: clamp(24px, 5vw, 60px);
+    margin: clamp(15px, 3vw, 25px) 0;
 }
 
 p[style*="text-align: center"] {
-    font-size: 60px;
+    font-size: clamp(24px, 5vw, 60px);
     color: #5d2906;
     font-weight: 800;
-    margin: 20px 0;
+    margin: clamp(15px, 3vw, 20px) 0;
+}
+
+/* وسائط استجابة إضافية */
+@media (max-width: 768px) {
+    .content, .content3 {
+        font-size: clamp(20px, 4.5vw, 36px);
+    }
+    
+    .content2 p, .content2 span {
+        font-size: clamp(22px, 5vw, 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .contienr {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .content, .content3 {
+        padding: 12px;
+        font-size: clamp(18px, 4vw, 24px);
+    }
+    
+    .content2 p, .content2 span {
+        font-size: clamp(20px, 4.5vw, 28px);
+    }
+    
+    .title3, .title4 {
+        font-size: clamp(22px, 4.5vw, 28px);
+    }
 }

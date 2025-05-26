@@ -16,7 +16,7 @@
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../image/masjid-pogung-dalangan-t5wNqFyCkTI-unsplash.jpg);
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
