@@ -92,6 +92,15 @@ span[style*="display: block"] {
     color: #16a085;
 }
 
+.span{
+    display: block;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #2980b9 !important;
+    margin: 10px 0 25px 0;
+    font-style: italic;
+    padding-right: 20px;
+}
+
 /* تأثيرات التفاعل */
 .content p:hover {
     transform: translateX(5px);
